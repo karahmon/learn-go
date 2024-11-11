@@ -22,7 +22,7 @@ func Addvalues(x, y int) int {
 func Divide(w http.ResponseWriter, r *http.Request) {
 	result, err := Dividevalues(3, 0)
 	if err != nil {
-		fmt.Fprintf(w, "Error: %v", err)
+		fmt.Fprint(w, "Error: ", err)
 		return
 	}
 	fmt.Fprint(w, "This is Divide Page and 3/0 is ", result)
